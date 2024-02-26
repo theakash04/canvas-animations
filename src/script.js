@@ -16,10 +16,10 @@ class Particles {
 
   // updating particle x & y as per speed
   update() {
-    if(this.x <= 0 || this.x >= canvas.width){
+    if (this.x <= 0 || this.x >= canvas.width) {
       this.speedX *= -1;
     }
-    if(this.y <= 0 || this.y >= canvas.height){
+    if (this.y <= 0 || this.y >= canvas.height) {
       this.speedY *= -1;
     }
     this.x += this.speedX;
@@ -28,9 +28,9 @@ class Particles {
 
   //circle draw fnc
   draw() {
-    ctx.fillStyle = "#E2DFD2";
+    ctx.fillStyle = "red";
     ctx.beginPath();
-    ctx.arc(this.x, this.y, 10, 0, Math.PI * 2);
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
     ctx.fill();
   }
 }
